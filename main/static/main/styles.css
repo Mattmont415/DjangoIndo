@@ -10,50 +10,115 @@ body {
   flex-direction: column;
 }
 
+@font-face {
+  ;
+}
+
+
+/* FOR MOBILE DEVICES  */
 @media screen and (max-width: 600px) {
+
+  /* Top Menu bar  */
+  #topbar {
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    -webkit-backface-visibility: hidden;
+    list-style-type: none;
+    width: 100%;
+    height: 50px;
+    top: 0px;
+    background-color: rgba(22,22,22);
+  }
+  .navbar {
+    display: inline-flex;
+    float: left;
+    padding: 2px 12px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  ul {
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: rgb(224, 206, 154);
+    /* align-items: center;
+    justify-content: center; */
+  }
+  .navbar a:hover {
+    text-decoration: none;
+    color: rgb(235, 138, 59);
+  }
+
+  /* Index Page  */
+  #splashpic {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    top: 40px;
+  }
+
+  /* Order Page  */
   #orderrightpic {
     display: none;
+    /* width: 100%; */
+  }
+  #orderleftpic {
     width: 100%;
   }
 }
+
+
+/* FOR DESKTOP/LARGER RES DEVICES  */
 @media screen and (min-width: 601px) {
 
+  /* Top Menu bar  */
+  #topbar {
+    position: fixed;
+    list-style-type: none;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    background-color: rgba(22,22,22, 0.644);
+  }
+  .navbar {
+    display: inline-flex;
+    float: right;
+    padding: 2px 20px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: rgb(224, 206, 154);
+  }
+  .navbar a:hover {
+    text-decoration: none;
+    color: rgb(235, 138, 59);
+  }
+
+  /* Order Page  */
   #twopics {
     display: inline-block;
   }
   .orderpics {
     width: 49.5%;
   }
-}
-
-/* Top Menu bar  */
-#topbar {
-  position: fixed;
-  list-style-type: none;
-  width: 100%;
-  height: 60px;
-  top: 0px;
-  background-color: rgba(22,22,22, 0.644);
-}
-.navbar {
-  display: inline-flex;
-  float: right;
-  padding: 2px 20px;
-  font-size: 18px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* Index Page  */
+  #splashpic {
+    width: 100%;
+    margin: 0px;
+    top: 100px;
+  }
 
 }
-.navbar {
-  top: 20px;
-}
-.navbar a {
-  text-decoration: none;
-  color: rgb(224, 206, 154);
-}
-.navbar a:hover {
-  text-decoration: none;
-  color: rgb(235, 138, 59);
-}
+
+
 
 
 
@@ -64,12 +129,16 @@ body {
 }
 
 
-/* Index Page  */
-#splashpic {
-  width: 100%;
-  margin: 0px;
-  top: 100px;
+.indexheadfont {
+
 }
+
+/* Index page  */
+.indexfont {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
 
 
 /* Order Page  */
@@ -115,7 +184,7 @@ label, input {
   flex-shrink: 0;
   width: 100%;
   margin: auto;
-  padding: 20px;
+  /* padding: 20px; */
   height: 250px;
 
   display: inline-flex;
@@ -129,17 +198,17 @@ label, input {
   color: rgb(214, 153, 73);
 }
 #leftfoot {
-  width: 25%;
+  width: 30%;
   margin: 10px;
   height: 250px;
 }
 #centerfoot {
-  width: 25%;
+  width: 30%;
   margin: 10px;
   height: 250px;
 }
 #rightfoot {
-  width: 25%;
+  width: 30%;
   margin: 10px;
   height: 250px;
 }
