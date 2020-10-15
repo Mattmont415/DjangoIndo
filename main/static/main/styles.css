@@ -1,0 +1,145 @@
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(196, 193, 189);
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  #orderrightpic {
+    display: none;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 601px) {
+
+  #twopics {
+    display: inline-block;
+  }
+  .orderpics {
+    width: 49.5%;
+  }
+}
+
+/* Top Menu bar  */
+#topbar {
+  position: fixed;
+  list-style-type: none;
+  width: 100%;
+  height: 60px;
+  top: 0px;
+  background-color: rgba(22,22,22, 0.644);
+}
+.navbar {
+  display: inline-flex;
+  float: right;
+  padding: 2px 20px;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.navbar {
+  top: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: rgb(224, 206, 154);
+}
+.navbar a:hover {
+  text-decoration: none;
+  color: rgb(235, 138, 59);
+}
+
+
+
+/* Middle of the page, to allow even spacing for footer*/
+.content {
+  flex: 1 0 auto;
+  padding: 20px;
+}
+
+
+/* Index Page  */
+#splashpic {
+  width: 100%;
+  margin: 0px;
+  top: 100px;
+}
+
+
+/* Order Page  */
+.quantity {
+  font-size: 18px;
+  height: 20px;
+  width: 30px;
+}
+.textbox {
+  width: 300px;
+  height: 100px;
+}
+form label {
+  font-size: 18px;
+}
+form .labelq {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 120px;
+}
+label, input {
+  margin: 5px;
+}
+#email {
+  width: 300px;
+  height: 30px;
+  font-size: 16px;
+}
+#orderbutton {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border: 3px solid red;
+  background-color: orange;
+}
+
+
+
+
+/* Footer bar  */
+#foot {
+  flex-shrink: 0;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  height: 250px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  background-color: rgb(58, 58, 58);
+}
+.footfont {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(214, 153, 73);
+}
+#leftfoot {
+  width: 25%;
+  margin: 10px;
+  height: 250px;
+}
+#centerfoot {
+  width: 25%;
+  margin: 10px;
+  height: 250px;
+}
+#rightfoot {
+  width: 25%;
+  margin: 10px;
+  height: 250px;
+}

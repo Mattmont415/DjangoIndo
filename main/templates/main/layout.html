@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>LA Indonesian</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <div id="topbar">
+      <ul>
+        <li class="navbar" ><a href="#foot" >Contact</a></li>
+        <li class="navbar" ><a href="/about.html" >About</a></li>
+        <li class="navbar" ><a href="{% url 'order' %}" >Order</a></li>
+        <li class="navbar" ><a href="/menu.html" >Menu</a></li>
+        <li class="navbar" ><a href="/" >Home</a></li>
+      </ul>
+    </div>
+
+    {% block body %}
+
+    {% endblock %}
+
+    <div id="foot">
+      <div id="leftfoot">
+        <h3 class="footfont">Want to get in touch? DM us on social media!</h3>
+        <p class="footfont"> Instagram </p>
+        <p class="footfont"> Facebook </p>
+      </div>
+      <div id="centerfoot">
+        <h3 class="footfont">Tentative Schedule: </h3>
+        <p class="footfont">Place orders: Sunday/Monday</p>
+        <p class="footfont">Delivery: Thursday/Friday!</p>
+        <p class="footfont"></p>
+      </div>
+      <div id="rightfoot">
+        <h3 class="footfont">Some extra information!</h3>
+        <p class="footfont">Here is some extra stuff</p>
+        <p class="footfont">Blah blah blah</p>
+      </div>
+    </div>
+
+
+  </body>
+</html>

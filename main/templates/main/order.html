@@ -1,0 +1,73 @@
+
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block body %}
+  <div id="twopics">
+    <img id="orderleftpic" class="orderpics" src="{% static 'main/samplepic.jpg' %}">
+    <img id="orderrightpic" class="orderpics" src="{% static 'main/samplepic.jpg' %}">
+    <!-- LOAD A DIFFERENT HORIZONTAL PICTURE FOR MOBILE -->
+  </div>
+
+  <div class="content">
+    <br><br><br>
+    <h3> For information on large catering orders please <a href="#foot" >Contact Us</a>! We politely
+      request at least one week's notice to prepare a large order and to check for product availability.
+      We can typically do catering orders seven days a week!
+      To see some sample catering packaging, visit our <a href="">Catering Orders</a> link.</h3>
+
+      <p>
+        Please select the item quantity of each and then enter your e-mail. You will be sent
+      an invoice to submit a payment via Venmo or Cashapp. After payment has been received, your order will be confirmed! Please allow several hours for processing as we are a very small business and we are functioning manually! As soon as you receive a confirmation e-mail, usually within a few hours, you will be all set!
+      </p>
+      <p>FREE delivery on all orders over 40$!</p>
+
+      <h2>Order Form: </h2>
+      <form>
+        <h3>Small Plates</h3>
+        <label for="salad" class="labelq">Salad: </label>
+        <input type="number" name="salad" value="0" class="quantity">
+        <br>
+        <label for="soup" class="labelq">Soup: </label>
+        <input type="number" name="salad" value="0" class="quantity">
+        <br>
+        <label for="springroll" class="labelq">Springroll: </label>
+        <input type="number" name="springroll" value="0" class="quantity">
+        <br>
+        <h3>Dinner Plates</h4>
+        <label for="cheese" class="labelq">Cheese: </label>
+        <input type="number" name="cheese" value="0" class="quantity">
+        <br>
+        <label for="Peppers" class="labelq">Peppers: </label>
+        <input type="number" name="Peppers" value="0" class="quantity">
+        <br>
+        <label for="Sandwich" class="labelq">Sandwich: </label>
+        <input type="number" name="Sandwich" value="0" class="quantity">
+        <br>
+        <label for="Special" class="labelq">Special!: </label>
+        <input type="number" name="Special" value="0" class="quantity">
+        <br>
+        <h3>Combo Meals</h3>
+        <label for="personal" class="labelq">Personal Meal: </label>
+        <input type="number" name="personal" value="0" class="quantity">
+        <br>
+        <label for="family" class="labelq">Family Meal: </label>
+        <input type="number" name="family" value="0" class="quantity">
+        <br><br>
+        <label for="extrainfo">Please discuss any allergies or dietary restrictions</label>
+        <br>
+        <p style="font-size: 14px;">Unfortunately, we cannot guarantee accommodation of all requests. <a href="#foot">Contacting us</a> first is preferable!</p>
+        <textarea name="extrainfo" class="textbox"></textarea>
+        <br><br>
+        <label for="address">Please enter your address. And please DOUBLE CHECK for correctness!</label>
+        <br><br>
+        <textarea name="address" class="textbox"></textarea>
+        <br><br>
+        <label for="email">Please enter your e-mail</label>
+        <br>
+        <input type="email" id="email" name="email">
+        <h3>Provide order number - Please state this number when sending payment!</h3>
+        <input type="submit" id="orderbutton" value="Place Order!">
+      </form>
+  </div>
+{% endblock %}
