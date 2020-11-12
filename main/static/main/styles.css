@@ -74,7 +74,50 @@ body {
     width: 100%;
   }
 
+  /* Menu Page */
+  #week1 {
+    width: 100%;
+    /* display: inline-flex;
+    float: left; */
+    align-items: center;
+    position: static;
+  }
+
+  #week2widescreen {
+    display: none;
+  }
+
+  #week2mobilescreen {
+    width: 100%;
+    /* display: inline-flex;
+    flex: right; */
+    align-items: center;
+    position: static;
+  }
+
+  #week3 {
+    width: 100%;
+    /* padding: 15px;
+    display: inline-flex; */
+    flex: right;
+    align-items: center;
+    position: static;
+  }
+
+  .menudescriptions {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: rgb(107, 37, 37);
+  }
+
+  .menuweekimage {
+    width: 100%;
+  }
+
+
 }
+
+
 
 
 /* FOR DESKTOP/LARGER RES DEVICES  */
@@ -120,45 +163,52 @@ body {
   }
 
 
+    /*Displaying the pictures on the menu page, NEED RWD? */
+  #week1 {
+    width: 100%;
+    padding: 15px;
+    display: inline-flex;
+    float: left;
+    align-items: center;
+    position: static;
+  }
+
+  #week2mobilescreen {
+    display: none;
+  }
+
+  #week2widescreen {
+    width: 100%;
+    display: inline-flex;
+    flex: right;
+    align-items: center;
+    position: static;
+  }
+
+  #week3 {
+    width: 100%;
+    padding: 15px;
+    display: inline-flex;
+    flex: right;
+    align-items: center;
+    position: static;
+  }
+
+  .menudescriptions {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: rgb(107, 37, 37);
+  }
+
+  .menuweekimage {
+    width: 550px;
+  }
 
 
 
 }
 
 
-
-/*Displaying the pictures on the menu page, NEED RWD? */
-#week1 {
-  width: 100%;
-  padding: 15px;
-  display: inline-flex;
-  float: left;
-  align-items: center;
-  position: static;
-}
-
-#week2 {
-  width: 100%;
-  display: inline-flex;
-  flex: right;
-  align-items: center;
-  position: static;
-}
-
-#week3 {
-  width: 100%;
-  padding: 15px;
-  display: inline-flex;
-  flex: right;
-  align-items: center;
-  position: static;
-}
-
-.menudescriptions {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
-  color: rgb(107, 37, 37);
-}
 
 
 
