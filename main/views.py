@@ -12,3 +12,6 @@ def menu(request):
 
 def order(request):
   return render(request, "main/order.html")
+
+def about(request):
+  return render(request, "main/about.html")
