@@ -7,25 +7,71 @@
   <!-- Put all STUFF in here -->
   <div class="content">
     <br><br>
-    <h3>Special Selections for the week of October 11th-October 16th</h3>
+
 
 
     <!-- Special items at the top -->
-    <div id="item1">
+    <div id="thisweekmenu">
+      <h2>The menu options for this week!</h2>
+      <br><br>
+      <h3>Special Selections for the week of XXXX:</h3>
+      <br><br><br>
+    </div>
+
+    <br><hr><hr><hr><br>
+
+    <h2>Below are some of our most popular dishes from previous weeks!</h2>
+
+    <div id="week1">
       <!-- Put image on left side, then put text next to it -->
-      <img id="image1" src="{% static 'main/sampzoom.jpg' %}" width="100px">
-      <button type="button" onclick="zoomin()">
-        Zoomin
-      </button>
-      <button type="button" onclick="zoomout()">
-        Zoomout
-      </button>
+      <div>
+        <img class="menuweekimage" id="week1food" src="{% static 'main/stockfood1.png' %}" width="500px">
+      </div>
+      <div class="menudescriptions">
+        <p>🍚 Nasi Kuning (Turmeric Rice) - Rice cooked with turmeric and coconut milk</p>
+        <p>🐔 Ayam Goreng Kuning (Indonesian Turmeric Fried Chicken) - Vegetarian option available!</p>
+        <p>🌱 Tahu Tempeh Pedas Basil (Tofu and Tempeh) - Cooked in spicy basil sauce</p>
+        <p>🥕 Acar Kuning (Indonesian style pickled carrots and cucumbers with turmeric) </p>
+      </div>
     </div>
 
-    <div id="item2">
+    <br><hr><hr><hr><br>
+
+    <div id="week2">
       <!-- Put image on right side, then put text next to it -->
+      <div class="menudescriptions">
+        <p> 🍚 Nasi Uduk (Coconut Rice) - Indonesian Style Coconut Rice Topped with Sliced Omelette</p>
+        <p> 🐓 Ayam Rica Rica (Shredded Chicken Breast with Chili Sauce) - <br>
+          Chicken-Red chilies-lemongrass-kaffir lime leaves-lime juice-basil
+          (🌱 Vegan Option Available with Substitution of Chicken with Soy Based Protein and Tofu)</p>
+        <p> 🍝 Mie Goreng Jawa - Indonesian Style Stir-Fried Noodles <br>
+          (🌱 Vegan Option will be made with Rice Noodles)</p>
+        <p> 🐷 Deep Fried Pork and Shrimp Shu mai (2Pieces) <br>
+          🌱 Vegan Options: Veggie Spring Rolls</p>
+      </div>
+      <div>
+        <img class="menuweekimage" id="week2food" src="{% static 'main/stockfood2.png' %}" width="500px">
+      </div>
     </div>
 
+    <br><hr><hr><hr><br>
+
+    <div id="week3">
+      <div>
+        <img class="menuweekimage" id="week3food" src="{% static 'main/stockfood3.png' %}" width="500px">
+      </div>
+      <div class="menudescriptions">
+        <p>🍚 Nasi Hainam (Hainanese Rice) - Garnished with cucumber</p>
+        <p>🐓 Ayam Hainam (Hainanese Style Chicken) - Traditionally Poached Chicken Dish Hainanese Style<br>
+          *Fried Option Available<br>
+          *Vegetarian and Vegan Option Will be made with Chef’s Special Dish Selection</p>
+        <p>🌱 Cah Kol-Telur (Stir Fry Cabbage and Eggs) <br>
+          *Vegetarian and Vegan Option will be made with Soy-Based-Protein Eggs Substitute</p>
+        <p>🦐 Hekeng - Fried Shrimp and Chicken Cakes  </p>
+      </div>
+    </div>
+
+    <br><hr><hr><hr><br>
 
     <!-- Rest of the items at the bottom -->
 

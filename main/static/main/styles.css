@@ -15,6 +15,7 @@ body {
 } */
 
 
+
 /* FOR MOBILE DEVICES  */
 @media screen and (max-width: 600px) {
 
@@ -31,6 +32,7 @@ body {
     top: 0px;
     background-color: rgba(22,22,22);
   }
+
   .navbar {
     display: inline-flex;
     float: left;
@@ -71,6 +73,7 @@ body {
   #orderleftpic {
     width: 100%;
   }
+
 }
 
 
@@ -116,8 +119,46 @@ body {
     top: 100px;
   }
 
+
+
+
+
 }
 
+
+
+/*Displaying the pictures on the menu page, NEED RWD? */
+#week1 {
+  width: 100%;
+  padding: 15px;
+  display: inline-flex;
+  float: left;
+  align-items: center;
+  position: static;
+}
+
+#week2 {
+  width: 100%;
+  display: inline-flex;
+  flex: right;
+  align-items: center;
+  position: static;
+}
+
+#week3 {
+  width: 100%;
+  padding: 15px;
+  display: inline-flex;
+  flex: right;
+  align-items: center;
+  position: static;
+}
+
+.menudescriptions {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: rgb(107, 37, 37);
+}
 
 
 
