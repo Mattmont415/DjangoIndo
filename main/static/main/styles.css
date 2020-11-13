@@ -288,12 +288,18 @@ label, input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: blue;
+  /* color: blue; */
   background-color: rgb(58, 58, 58);
 }
+/* Header fonts in the footer */
 .footfont {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f8771e;
+}
+/* Test in the body of the footer paragraphs  */
+.footfonttxt {
   color: rgb(214, 153, 73);
+  font-size: 18px;
 }
 #leftfoot {
   width: 30%;
@@ -309,4 +315,8 @@ label, input {
   width: 30%;
   margin: 10px;
   height: 250px;
+}
+.sociallogo {
+  width: 30px;
+  height: 30px;
 }
