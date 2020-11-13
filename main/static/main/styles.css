@@ -114,6 +114,50 @@ body {
     width: 100%;
   }
 
+    /* Footer bar  */
+  #foot {
+    flex-shrink: 0;
+    width: 100%;
+    margin: auto;
+    /* padding: 20px; */
+    height: 250px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* color: blue; */
+    background-color: rgb(58, 58, 58);
+    font-size: 10px;
+  }
+  /* Header fonts in the footer */
+  .footfont {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f8771e;
+  }
+  /* Test in the body of the footer paragraphs  */
+  .footfonttxt {
+    color: rgb(214, 153, 73);
+  }
+  #leftfoot {
+    width: 30%;
+    margin: 10px;
+    height: 250px;
+  }
+  #centerfoot {
+    width: 30%;
+    margin: 10px;
+    height: 250px;
+  }
+  #rightfoot {
+    width: 30%;
+    margin: 10px;
+    height: 250px;
+  }
+  .sociallogo {
+    width: 30px;
+    height: 30px;
+  }
+
 
 }
 
@@ -204,6 +248,50 @@ body {
     width: 550px;
   }
 
+    /* Footer bar  */
+  #foot {
+    flex-shrink: 0;
+    width: 100%;
+    margin: auto;
+    /* padding: 20px; */
+    height: 250px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* color: blue; */
+    background-color: rgb(58, 58, 58);
+  }
+  /* Header fonts in the footer */
+  .footfont {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f8771e;
+  }
+  /* Test in the body of the footer paragraphs  */
+  .footfonttxt {
+    color: rgb(214, 153, 73);
+    font-size: 18px;
+  }
+  #leftfoot {
+    width: 30%;
+    margin: 10px;
+    height: 250px;
+  }
+  #centerfoot {
+    width: 30%;
+    margin: 10px;
+    height: 250px;
+  }
+  #rightfoot {
+    width: 30%;
+    margin: 10px;
+    height: 250px;
+  }
+  .sociallogo {
+    width: 30px;
+    height: 30px;
+  }
+
 
 
 }
@@ -277,46 +365,3 @@ label, input {
 
 
 
-/* Footer bar  */
-#foot {
-  flex-shrink: 0;
-  width: 100%;
-  margin: auto;
-  /* padding: 20px; */
-  height: 250px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  /* color: blue; */
-  background-color: rgb(58, 58, 58);
-}
-/* Header fonts in the footer */
-.footfont {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #f8771e;
-}
-/* Test in the body of the footer paragraphs  */
-.footfonttxt {
-  color: rgb(214, 153, 73);
-  font-size: 18px;
-}
-#leftfoot {
-  width: 30%;
-  margin: 10px;
-  height: 250px;
-}
-#centerfoot {
-  width: 30%;
-  margin: 10px;
-  height: 250px;
-}
-#rightfoot {
-  width: 30%;
-  margin: 10px;
-  height: 250px;
-}
-.sociallogo {
-  width: 30px;
-  height: 30px;
-}
