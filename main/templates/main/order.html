@@ -23,36 +23,46 @@
       <p class="footfonttxt" style="color: rgb(139, 139, 30)"><strong>FREE delivery on all orders over 40$!</strong></p>
 
       <h2>Order Form: </h2>
-      <form>
+      <form method="post">
+        {% csrf_token %}
         <h3>Small Plates</h3>
         <label for="salad" class="labelq">Salad: </label>
         <input type="number" name="salad" value="0" class="quantity">
+        <p> x $5.00</p>
         <br>
         <label for="soup" class="labelq">Soup: </label>
         <input type="number" name="salad" value="0" class="quantity">
+        <p> x $3.50</p>
         <br>
         <label for="springroll" class="labelq">Springroll: </label>
         <input type="number" name="springroll" value="0" class="quantity">
+        <p> x $4.50</p>
         <br>
         <h3>Dinner Plates</h4>
         <label for="cheese" class="labelq">Cheese: </label>
         <input type="number" name="cheese" value="0" class="quantity">
+        <p> x $7.50</p>
         <br>
         <label for="Peppers" class="labelq">Peppers: </label>
         <input type="number" name="Peppers" value="0" class="quantity">
+        <p> x $6.50</p>
         <br>
         <label for="Sandwich" class="labelq">Sandwich: </label>
         <input type="number" name="Sandwich" value="0" class="quantity">
+        <p> x $8.50</p>
         <br>
         <label for="Special" class="labelq">Special!: </label>
         <input type="number" name="Special" value="0" class="quantity">
+        <p> x $11.00</p>
         <br>
         <h3>Combo Meals</h3>
         <label for="personal" class="labelq">Personal Meal: </label>
         <input type="number" name="personal" value="0" class="quantity">
+        <p> x $12.00</p>
         <br>
         <label for="family" class="labelq">Family Meal: </label>
         <input type="number" name="family" value="0" class="quantity">
+        <p> x $40.00</p>
         <br><br>
         <label for="extrainfo">Please discuss any allergies or dietary restrictions</label>
         <br>
@@ -66,7 +76,9 @@
         <label for="email">Please enter your e-mail</label>
         <br>
         <input type="email" id="email" name="email">
-        <h3>Provide order number - Please state this number when sending payment!</h3>
+        <h3>Payment information is provided in the e-mail! <br>
+          Please include the order number in the Venmo/Cashapp subject line! <br>
+          This makes processing your order much easier.</h3>
         <input type="submit" id="orderbutton" value="Place Order!">
       </form>
   </div>
