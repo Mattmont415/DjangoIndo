@@ -19,6 +19,7 @@ body {
 /* FOR MOBILE DEVICES  */
 @media screen and (max-width: 600px) {
 
+
   /* Top Menu bar  */
   #topbar {
     z-index: 2;
@@ -63,6 +64,19 @@ body {
     width: 100%;
     margin: 0px;
     top: 40px;
+  }
+
+  #displaydesktop {
+    display: none;
+    /* visibility: hidden; */
+  }
+
+  /* Remove the show pics of food for small devices */
+  .introbig { 
+    position: absolute;
+    right: 0px;
+    bottom: 0px
+    /* visibility: hidden; */
   }
 
   /* Order Page  */
@@ -159,6 +173,9 @@ body {
   }
 
 
+
+
+
 }
 
 
@@ -166,6 +183,11 @@ body {
 
 /* FOR DESKTOP/LARGER RES DEVICES  */
 @media screen and (min-width: 601px) {
+
+  #displaydesktop {
+    visibility: visible;
+    display: block;
+  }
 
   /* Top Menu bar  */
   #topbar {

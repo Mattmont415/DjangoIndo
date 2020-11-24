@@ -19,9 +19,11 @@
         we usually go to generally more distant locations, such as Pasadena, Compton and Long Beach. Of course, we can make custom delivery options for large
         volume catering orders or other special conditions! Please just reach out to us on Social Media first! Links are at the bottom of the page!
       </p>
-
-      <p class="indexfont">Here are just a few of our signature dishes...</p>
-      <img id="foodbarsplash" style="width: 100%;" src="{% static 'main/samplefoodbar.png' %}" alt="Some signature dishes displayed">
+      <!-- Only displays the images if on a large screen of "signature dishes" -->
+      <div id="displaydesktop">
+        <p class="indexfont introbig">Here are just a few of our signature dishes...</p>
+        <img id="foodbarsplash" class="introbig" style="width: 100%;" src="{% static 'main/samplefoodbar.png' %}" alt="Some signature dishes displayed">
+      </div>
     </div>
     <!-- End of stuff  -->
 {% endblock %}
