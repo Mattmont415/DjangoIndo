@@ -3,12 +3,17 @@
 {% load static %}
 
 {% block body %}
-    <img id="splashpic" src="{% static 'main/samplefoodbar2.png' %}" alt="Indonesian Food Picture">
+    <div class="desktopsplash">
+      <img id="splashabout" src="{% static 'main/samplefoodbar2.png' %}" alt="Indonesian Food Picture">
+    </div>
 
+    <div class="mobilesplash">
+      <img id="splashabout" src="{% static 'main/foodbarhalf.png' %}" alt="Indonesian Food Picture">
+    </div>
     <!-- Put all STUFF in here -->
     <div class="content">
       <h2 class="indexheadfont">Who are we?</h2>
-      <p></p>
+      <p> </p>  
       <p class="indexfont">As native Indonesians who grew up with a great appreciation for the cuisine
         of our culture, we developed a passion for cooking years ago. It was not until recently that we had
         the opportunity to truly explore what it would be like to cook and prepare this food and share it 
