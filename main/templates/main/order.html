@@ -25,6 +25,8 @@
       <h2>Order Form: </h2>
       <form method="post">
         {% csrf_token %}
+
+        <!-- //Iterate over the side dishes while they exist (avoid blank spaced item)  -->
         <h3>Small Plates</h3>
         <label for="salad" class="labelq">Salad: </label>
         <input type="number" name="salad" value="0" min="0" class="quantity">

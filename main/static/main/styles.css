@@ -351,6 +351,51 @@ body {
 
 
 
+
+/* Admin page updating */
+/* .formstyle { */
+#adminform {
+  color: rgb(85, 44, 16);
+  margin: 20px;
+  /* justify-content: center; */
+  /* flex: left; */
+}
+
+.margin {
+  margin: 10px;
+}
+
+.lblletter {
+  font-size: 20px;
+  width: 25px;
+  display: inline-block;
+}
+
+.inptext {
+  height: 35px;
+  font-size: 20px;
+  width: 180px;
+}
+
+.lblprice {
+  /* display: inline-block; */
+}
+
+.adminprice {
+  height: 35px;
+  width: 60px;
+  font-size: 18px;
+}
+
+#updatebutton {
+  width: 175px;
+  background-color: rgb(236, 150, 134);
+  height: 70px;
+  font-size: 34px;
+}
+
+
+
 /* Middle of the page, to allow even spacing for footer*/
 .content {
   flex: 1 0 auto;
@@ -373,8 +418,8 @@ body {
 /* Order Page  */
 .quantity {
   font-size: 18px;
-  height: 20px;
-  width: 30px;
+  height: 30px;
+  width: 43px;
 }
 .textbox {
   width: 300px;
@@ -388,6 +433,7 @@ form .labelq {
   float: left;
   clear: left;
   width: 120px;
+  font-size: 24px;
 }
 label, input {
   margin: 5px;

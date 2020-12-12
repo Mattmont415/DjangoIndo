@@ -1,62 +1,66 @@
-<!DOCTYPE html>
+{% extends "main/layout.html" %}
+{% load static %}
 
-
-<head>
-  <title>LA Indo Admin</title>
-</head>
-
+{% block body %}
 <body>
-  <h1>Admin Page</h1>
+  <p></p><p></p><p>
+  <h1 class="margin">Admin Page</h1>
 
 
-  <h2>Modifying names and prices of current orders</h2>
+  <h2 class="margin">Modifying names and prices of current order options</h2>
 
   <form action="{% url 'order' %}" method="post">
     {% csrf_token %}
-    <p><strong>Side Dishes</strong></p>
-    <label for="namea"><strong>A. </strong></label>
-      <input type="text" value="{{ nameA }}" name="namea">
-    <label for="pricea">Price: </label>
-      <input type="text" value="{{ priceA }}" name="pricea"><br><br>
+    <div class="formstyle" id="adminform">
+      <p><strong>Side Dishes</strong></p>
+      <label for="namea" class="lblletter"><strong>A. </strong></label>
+        <input type="text" class="inptext" value="{{ nameA }}" name="namea">
+      <label for="pricea" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceA }}" name="pricea"><br><br>
 
-    <label for="nameb"><strong>B. </strong></label>
-      <input type="text" value="{{ nameB }}" name="nameb">
-    <label for="priceb">Price: </label>
-      <input type="text" value="{{ priceB }}" name="priceb"><br><br>
+      <label for="nameb" class="lblletter"><strong>B. </strong></label>
+        <input type="text" class="inptext" value="{{ nameB }}" name="nameb">
+      <label for="priceb" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceB }}" name="priceb"><br><br>
 
-    <label for="namec"><strong>C. </strong></label>
-      <input type="text" value="{{ nameC }}" name="namec">
-    <label for="pricec">Price: </label>
-      <input type="text" value="{{ priceC }}" name="pricec"><br><br>
+      <label for="namec" class="lblletter"><strong>C. </strong></label>
+        <input type="text" class="inptext" value="{{ nameC }}" name="namec">
+      <label for="pricec" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceC }}" name="pricec"><br><br>
 
-    <label for="named"><strong>D. </strong></label>
-      <input type="text" value="{{ nameD }}" name="named">
-    <label for="priced">Price: </label>
-      <input type="text" value="{{ priceD }}" name="priced"><br><br>
+      <label for="named" class="lblletter"><strong>D. </strong></label>
+        <input type="text" class="inptext" value="{{ nameD }}" name="named">
+      <label for="priced" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceD }}" name="priced"><br><br>
 
-    <label for="namee"><strong>E. </strong></label>
-      <input type="text" value="{{ nameE }}" name="namee">
-    <label for="pricee">Price: </label>
-      <input type="text" value="{{ priceE }}" name="pricee"><br><br>
+      <label for="namee" class="lblletter"><strong>E. </strong></label>
+        <input type="text" class="inptext" value="{{ nameE }}" name="namee">
+      <label for="pricee" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceE }}" name="pricee"><br><br>
 
-    <p><strong>Combo Meals</strong></p>
+      <p><strong>Combo Meals</strong></p>
 
-    <label for="nameF"><strong>F. </strong></label>
-      <input type="text" value="{{ nameF }}" name="namef">
-    <label for="pricef">Price: </label>
-      <input type="text" value="{{ priceF }}" name="pricef"><br><br>
+      <label for="nameF" class="lblletter"><strong>F. </strong></label>
+        <input type="text" class="inptext" value="{{ nameF }}" name="namef">
+      <label for="pricef" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceF }}" name="pricef"><br><br>
 
-    <label for="nameg"><strong>G. </strong></label>
-      <input type="text" value="{{ nameG }}" name="nameg">
-    <label for="priceg">Price: </label>
-      <input type="text" value="{{ priceG }}" name="priceG"><br><br>
+      <label for="nameg" class="lblletter"><strong>G. </strong></label>
+        <input type="text" class="inptext" value="{{ nameG }}" name="nameg">
+      <label for="priceg" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceG }}" name="priceG"><br><br>
 
-    <p><strong>Custom Cater Order value:</strong></p>
+      <p><strong>Custom Cater Order value:</strong></p>
 
-    <label for="nameh"><strong>H. </strong></label>
-      <input type="text" value="{{ nameH }}" name="nameh">
-    <label for="priceh">Price: </label>
-      <input type="text" value="{{ priceH }}" name="priceh"><br><br>
+      <label for="nameh" class="lblletter"><strong>H. </strong></label>
+        <input type="text" class="inptext" value="{{ nameH }}" name="nameh">
+      <label for="priceh" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceH }}" name="priceh"><br><br>
+        
+      <p class="margin"><strong>Please double check before submitting!</strong></p>
+
+      <input type="submit" id="updatebutton" value="Update">
+    </div>
   </form>
 
 
@@ -65,9 +69,7 @@
 
 
 
-  <p><strong>Please double check before submitting!</strong></p>
 
 </body>
 
-
-</html>
+{% endblock %}
