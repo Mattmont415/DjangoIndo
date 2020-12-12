@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+
+<head>
+  <title>LA Indo Admin</title>
+</head>
+
+<body>
+  <h1>Admin Page</h1>
+
+
+  <h2>Modifying names and prices of current orders</h2>
+
+  <form action="{% url 'order' %}" method="post">
+    {% csrf_token %}
+    <p><strong>Side Dishes</strong></p>
+    <label for="namea"><strong>A. </strong></label>
+      <input type="text" value="{{ nameA }}" name="namea">
+    <label for="pricea">Price: </label>
+      <input type="text" value="{{ priceA }}" name="pricea"><br><br>
+
+    <label for="nameb"><strong>B. </strong></label>
+      <input type="text" value="{{ nameB }}" name="nameb">
+    <label for="priceb">Price: </label>
+      <input type="text" value="{{ priceB }}" name="priceb"><br><br>
+
+    <label for="namec"><strong>C. </strong></label>
+      <input type="text" value="{{ nameC }}" name="namec">
+    <label for="pricec">Price: </label>
+      <input type="text" value="{{ priceC }}" name="pricec"><br><br>
+
+    <label for="named"><strong>D. </strong></label>
+      <input type="text" value="{{ nameD }}" name="named">
+    <label for="priced">Price: </label>
+      <input type="text" value="{{ priceD }}" name="priced"><br><br>
+
+    <label for="namee"><strong>E. </strong></label>
+      <input type="text" value="{{ nameE }}" name="namee">
+    <label for="pricee">Price: </label>
+      <input type="text" value="{{ priceE }}" name="pricee"><br><br>
+
+    <p><strong>Combo Meals</strong></p>
+
+    <label for="nameF"><strong>F. </strong></label>
+      <input type="text" value="{{ nameF }}" name="namef">
+    <label for="pricef">Price: </label>
+      <input type="text" value="{{ priceF }}" name="pricef"><br><br>
+
+    <label for="nameg"><strong>G. </strong></label>
+      <input type="text" value="{{ nameG }}" name="nameg">
+    <label for="priceg">Price: </label>
+      <input type="text" value="{{ priceG }}" name="priceG"><br><br>
+
+    <p><strong>Custom Cater Order value:</strong></p>
+
+    <label for="nameh"><strong>H. </strong></label>
+      <input type="text" value="{{ nameH }}" name="nameh">
+    <label for="priceh">Price: </label>
+      <input type="text" value="{{ priceH }}" name="priceh"><br><br>
+  </form>
+
+
+
+
+
+
+
+  <p><strong>Please double check before submitting!</strong></p>
+
+</body>
+
+
+</html>

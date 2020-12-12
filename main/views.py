@@ -34,3 +34,6 @@ def order(request):
 
 def about(request):
   return render(request, "main/about.html")
+
+def admin5959(request):
+  return render(request, "main/admin5959.html")
