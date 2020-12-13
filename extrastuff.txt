@@ -4,3 +4,7 @@ Originally in procfile
 
 web: gunicorn indofoodv1.wsgi --log-file -
 Updated in ProcFile
+
+
+Messing around with SK (rm spc)
+DJANGO_SECRET_KEY="eu09(ilk 6@4sfdofb=b_2ht@vad*$ehh 9-)3u_83+y%(+phh&="
