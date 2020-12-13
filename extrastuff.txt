@@ -1,0 +1,6 @@
+web: python manage.py runserver 0.0.0.0:$PORT
+Originally in procfile
+
+
+web: gunicorn indofoodv1.wsgi --log-file -
+Updated in ProcFile

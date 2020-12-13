@@ -19,19 +19,18 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# DATABASE_URL = os.environ['DATABASE_URL']
-
-# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'e24ic&8-#z2z3rq3r2_64r5=*57bbr#gl1a-du%37xgf61&*qa'
+#SECRET_KEY = 'e24ic&8-#z2z3rq3r2_64r5=*57bbr#gl1a-du%37xgf61&*qa'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','e24ic&8-#z2z3rq3r2_64r5=*57bbr#gl1a-du%37xgf61&*qa')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0','192.168.1.33','192.168.1.163']
 
