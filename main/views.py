@@ -18,16 +18,19 @@ def order(request):
     message_name = "Toni's Kitchen! Regarding order number: " #Need to get the order num some how
     message_email = request.POST['email']
 
-    message = "You ordered " + request.POST['personal'] + " personal meals.\n" + "And " + request.POST['family'] + " meals."
+    message = "You ordered " + request.POST['personal'] + " personal meals.\n" + "And " + request.POST['family'] + " family meals." + "The address to send is " + request.POST['address']
     # personal_meal = request.POST['personal']
     # family_meal = request.POST['family']
 
     send_mail(
       message_name, #Subject
       message, #Message itself
-      message_email, #from email
-      ['mattmont415@gmail.com'], #to email
+      "tonisfabkitchen@gmail.com", #from email
+      ['mattmont415@gmail.com', 'tonisfabkitchen@gmail.com', message_email], #to email
     )
+
+    return render(request, "main/send_email.html")
+
   return render(request, "main/order.html")
 
 
@@ -37,3 +40,6 @@ def about(request):
 
 def admin5959(request):
   return render(request, "main/admin5959.html")
+
+def send_email(request):
+  return render(request, "main/send_email.html")

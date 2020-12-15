@@ -14,6 +14,7 @@ from pathlib import Path
 import django_heroku
 import os
 import psycopg2
+from django.core.mail import send_mail
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -154,11 +155,15 @@ django_heroku.settings(locals())
 #Dealing with API to handle sending e-mails from the order page
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-EMAIL_HOST_PASSWORD = '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'
-EMAIL_PORT = '587'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'tonisfabkitchen@gmail.com'
+EMAIL_HOST_PASSWORD = 'ABCdef123456'
 EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = False 
 
 #Email settings for sample thing
 
