@@ -56,6 +56,18 @@ def admin5959(request):
     namej = request.POST['namej']
     namek = request.POST['namek']
     catername = request.POST['catername']
+    pricea = request.POST['pricea']
+    priceb = request.POST['priceb']
+    pricec = request.POST['pricec']
+    priced = request.POST['priced']
+    pricee = request.POST['pricee']
+    pricef = request.POST['pricef']
+    priceg = request.POST['priceg']
+    priceh = request.POST['priceh']
+    pricei = request.POST['pricei']
+    pricej = request.POST['pricej']
+    pricek = request.POST['pricek']
+    caterprice = request.POST['caterprice']
 
     #Passing as a request TO the order.html page
     return render(request, "main/order.html", { 
@@ -72,6 +84,18 @@ def admin5959(request):
       'nameJ': namej, 
       'nameK': namek,
       'caterName': catername,
+      'priceA': pricea,
+      'priceB': priceb,
+      'priceC': pricec,
+      'priceD': priced,
+      'priceE': pricee,
+      'priceF': pricef,
+      'priceG': priceg,
+      'priceH': priceh,
+      'priceI': pricei,
+      'priceJ': pricej,
+      'priceK': pricek,
+      'caterPrice': caterprice
     })
   return render(request, "main/admin5959.html")
 
