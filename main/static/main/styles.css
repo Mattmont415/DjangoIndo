@@ -434,7 +434,7 @@ form .labelq {
   float: left;
   clear: left;
   width: 120px;
-  font-size: 24px;
+  font-size: 22px;
 }
 label, input {
   margin: 5px;
@@ -450,6 +450,9 @@ label, input {
   font-size: 20px;
   border: 3px solid red;
   background-color: orange;
+}
+.lblprice {
+  font-style: italic;
 }
 
 

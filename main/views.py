@@ -18,6 +18,8 @@ def order(request):
     message_name = "Toni's Kitchen! Regarding order number: " #Need to get the order num some how
     message_email = request.POST['email']
 
+    #Somewhere check if the REQUEST value is > 0, then put in e-mail
+
     message = "You ordered " + request.POST['personal'] + " personal meals.\n" + "And " + request.POST['family'] + " family meals." + "The address to send is " + request.POST['address']
     # personal_meal = request.POST['personal']
     # family_meal = request.POST['family']
@@ -39,6 +41,21 @@ def about(request):
   return render(request, "main/about.html")
 
 def admin5959(request):
+  #If the method is post
+  if request.method == "POST":
+    #Set the variable to the name of what each slot is
+    namea = request.POST['namea']
+    nameb = request.POST['nameb']
+    namec = request.POST['namec']
+    named = request.POST['named']
+    namee = request.POST['namee']
+    namef = request.POST['namef']
+    nameg = request.POST['nameg']
+    nameh = request.POST['nameh']
+    namei = request.POST['namei']
+    namej = request.POST['namej']
+    namek = request.POST['namek']
+    catername = request.POST['catername']
   return render(request, "main/admin5959.html")
 
 def send_email(request):

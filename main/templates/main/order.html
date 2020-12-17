@@ -26,45 +26,52 @@
       <form method="post">
         {% csrf_token %}
 
+        <!-- Need if statements for EACH block, if exists, then print it -->
+
+
         <!-- //Iterate over the side dishes while they exist (avoid blank spaced item)  -->
         <h3>Small Plates</h3>
-        <label for="salad" class="labelq">Salad: </label>
-        <input type="number" name="salad" value="0" min="0" class="quantity">
-        <p> x $5.00 = </p>
-        <br>
-        <label for="soup" class="labelq">Soup: </label>
-        <input type="number" name="salad" value="0" min="0" class="quantity">
-        <p> x $3.50</p>
-        <br>
-        <label for="springroll" class="labelq">Springroll: </label>
-        <input type="number" name="springroll" value="0" min="0" class="quantity">
-        <p> x $4.50</p>
-        <br>
-        <h3>Dinner Plates</h4>
-        <label for="cheese" class="labelq">Cheese: </label>
-        <input type="number" name="cheese" value="0" min="0" class="quantity">
-        <p> x $7.50</p>
-        <br>
-        <label for="Peppers" class="labelq">Peppers: </label>
-        <input type="number" name="Peppers" value="0" min="0" class="quantity">
-        <p> x $6.50</p>
-        <br>
-        <label for="Sandwich" class="labelq">Sandwich: </label>
-        <input type="number" name="Sandwich" value="0" min="0" class="quantity">
-        <p> x $8.50</p>
-        <br>
-        <label for="Special" class="labelq">Special!: </label>
-        <input type="number" name="Special" value="0" min="0" class="quantity">
-        <p> x $11.00</p>
-        <br>
+        <label for="namea" class="labelq">{{ nameA }}: </label>
+          <input type="number" name="{{ namea }}" value="0" min="0" class="quantity">
+          <p class="lblprice"> x $5.00 = </p><br>
+        <label for="nameb" class="labelq">{{ nameB }}: </label>
+          <input type="number" name="nameb" value="0" min="0" class="quantity">
+          <p class="lblprice"> x $3.50</p><br>
+        <label for="namec" class="labelq">{{ nameC }}: </label>
+          <input type="number" name="namec" value="0" min="0" class="quantity">
+          <p class="lblprice"> x $4.50</p><br>
+        <label for="named" class="labelq">{{ nameD }}: </label>
+          <input type="number" name="named" value="0" min="0" class="quantity">
+          <p class="lblprice"> x $4.50</p><br>
+        <label for="namee" class="labelq">{{ nameE }}: </label>
+          <input type="number" name="namee" value="0" min="0" class="quantity">
+          <p class="lblprice"> x $4.50</p><br>
+
         <h3>Combo Meals</h3>
-        <label for="personal" class="labelq">Personal Meal: </label>
-        <input type="number" name="personal" value="0" min="0" class="quantity">
-        <p> x $12.00</p>
-        <br>
-        <label for="family" class="labelq">Family Meal: </label>
-        <input type="number" name="family" value="0" min="0" class="quantity">
-        <p> x $40.00</p>
+        <label for="namef" class="labelq">{{ nameF }}: </label>
+          <input type="number" name="personal" value="0" min="0" class="quantity">
+          <p class="lblprice">x $12.00</p><br>
+        <label for="nameg" class="labelq">{{ nameG }}: </label>
+          <input type="number" name="family" value="0" min="0" class="quantity">
+          <p class="lblprice">x $40.00</p><br>
+
+        <h3>Add-ons</h3>
+        <label for="nameh" class="labelq">{{ nameH }}: </label>
+          <input type="number" name="personal" value="0" min="0" class="quantity">
+          <p class="lblprice">x $12.00</p><br>
+        <label for="namei" class="labelq">{{ nameI }}: </label>
+          <input type="number" name="family" value="0" min="0" class="quantity">
+          <p class="lblprice">x $40.00</p><br>
+        <label for="namej" class="labelq">{{ nameJ }}: </label>
+          <input type="number" name="personal" value="0" min="0" class="quantity">
+          <p class="lblprice">x $12.00</p><br>
+        <label for="namek" class="labelq">{{ nameK }}: </label>
+          <input type="number" name="family" value="0" min="0" class="quantity">
+          <p class="lblprice">x $40.00</p><br>
+
+        <h3>Catering (Please <a href="#foot">Contact us</a> first!)</h3>
+        
+
         <p style="font-weight:bold;font-size:18px;">Total: $ 0.00 </p>
         <br><br>
         <label for="extrainfo">Please discuss any allergies or dietary restrictions</label>

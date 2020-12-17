@@ -12,7 +12,7 @@
   <form action="{% url 'order' %}" method="post">
     {% csrf_token %}
     <div class="formstyle" id="adminform">
-      <p><strong>Side Dishes</strong></p>
+      <p><strong>Small Plates</strong></p>
       <label for="namea" class="lblletter"><strong>A. </strong></label>
         <input type="text" class="inptext" value="{{ nameA }}" name="namea">
         <br>
@@ -45,7 +45,7 @@
 
       <p><strong>Combo Meals</strong></p>
 
-      <label for="nameF" class="lblletter"><strong>F. </strong></label>
+      <label for="namef" class="lblletter"><strong>F. </strong></label>
         <input type="text" class="inptext" value="{{ nameF }}" name="namef">
         <br>
       <label for="pricef" class="lblprice">Price: </label>
@@ -55,15 +55,41 @@
         <input type="text" class="inptext" value="{{ nameG }}" name="nameg">
         <br>
       <label for="priceg" class="lblprice">Price: </label>
-        <input type="number" class="adminprice" min="0" value="{{ priceG }}" name="priceG"><br><br>
+        <input type="number" class="adminprice" min="0" value="{{ priceG }}" name="priceg"><br><br>
 
-      <p><strong>Custom Cater Order value:</strong></p>
+      <p><strong>Add-ons</strong></p>
 
       <label for="nameh" class="lblletter"><strong>H. </strong></label>
         <input type="text" class="inptext" value="{{ nameH }}" name="nameh">
         <br>
       <label for="priceh" class="lblprice">Price: </label>
         <input type="number" class="adminprice" min="0" value="{{ priceH }}" name="priceh"><br><br>
+
+      <label for="namei" class="lblletter"><strong>I. </strong></label>
+        <input type="text" class="inptext" value="{{ nameI }}" name="namei">
+        <br>
+      <label for="pricei" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceI }}" name="pricei"><br><br>
+      
+      <label for="namej" class="lblletter"><strong>J. </strong></label>
+        <input type="text" class="inptext" value="{{ nameJ }}" name="namej">
+        <br>
+      <label for="pricej" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceJ }}" name="pricej"><br><br>
+
+      <label for="namek" class="lblletter"><strong>K. </strong></label>
+        <input type="text" class="inptext" value="{{ nameK }}" name="namek">
+        <br>
+      <label for="pricek" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ priceK }}" name="pricek"><br><br>
+
+      <p><strong>Custom Cater Order value:</strong></p>
+
+      <label for="catername" class="lblletter"><strong>H. </strong></label>
+        <input type="text" class="inptext" value="{{ caterName }}" name="catername">
+        <br>
+      <label for="caterprice" class="lblprice">Price: </label>
+        <input type="number" class="adminprice" min="0" value="{{ caterPrice }}" name="caterprice"><br><br>
         
       <p class="margin"><strong>Please double check before submitting!</strong></p>
 
