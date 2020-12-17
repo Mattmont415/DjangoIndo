@@ -23,54 +23,93 @@
       <p class="footfonttxt" style="color: rgb(139, 139, 30)"><strong>FREE delivery on all orders over 40$!</strong></p>
 
       <h2>Order Form: </h2>
-      <form method="post">
+      <form method="post" action="{% url 'send_email' %}">
         {% csrf_token %}
 
-        <!-- Need if statements for EACH block, if exists, then print it -->
+
+        <!-- This checks if ANY items exist in the category, THEN display title -->
+        {% if nameA or nameB or nameC or nameD or nameE %}
+          <h3>Small Plates</h3>
+        {% endif %}
+
+        {% if nameA %}
+          <label for="namea" class="labelq">{{ nameA }}: </label>
+            <input type="number" name="{{ namea }}" value="0" min="0" class="quantity">
+            <p class="lblprice"> x $5.00</p><br>
+        {% endif %}
+        {% if nameB %}
+          <label for="nameb" class="labelq">{{ nameB }}: </label>
+            <input type="number" name="nameb" value="0" min="0" class="quantity">
+            <p class="lblprice"> x $3.50</p><br>
+        {% endif %}
+        {% if nameC %}
+          <label for="namec" class="labelq">{{ nameC }}: </label>
+            <input type="number" name="namec" value="0" min="0" class="quantity">
+            <p class="lblprice"> x $4.50</p><br>
+        {% endif %}
+        {% if nameD %}
+          <label for="named" class="labelq">{{ nameD }}: </label>
+            <input type="number" name="named" value="0" min="0" class="quantity">
+            <p class="lblprice"> x $4.50</p><br>
+        {% endif %}
+        {% if nameE %}
+          <label for="namee" class="labelq">{{ nameE }}: </label>
+            <input type="number" name="namee" value="0" min="0" class="quantity">
+            <p class="lblprice"> x $4.50</p><br><br>
+        {% endif %}
 
 
-        <!-- //Iterate over the side dishes while they exist (avoid blank spaced item)  -->
-        <h3>Small Plates</h3>
-        <label for="namea" class="labelq">{{ nameA }}: </label>
-          <input type="number" name="{{ namea }}" value="0" min="0" class="quantity">
-          <p class="lblprice"> x $5.00 = </p><br>
-        <label for="nameb" class="labelq">{{ nameB }}: </label>
-          <input type="number" name="nameb" value="0" min="0" class="quantity">
-          <p class="lblprice"> x $3.50</p><br>
-        <label for="namec" class="labelq">{{ nameC }}: </label>
-          <input type="number" name="namec" value="0" min="0" class="quantity">
-          <p class="lblprice"> x $4.50</p><br>
-        <label for="named" class="labelq">{{ nameD }}: </label>
-          <input type="number" name="named" value="0" min="0" class="quantity">
-          <p class="lblprice"> x $4.50</p><br>
-        <label for="namee" class="labelq">{{ nameE }}: </label>
-          <input type="number" name="namee" value="0" min="0" class="quantity">
-          <p class="lblprice"> x $4.50</p><br>
+        {% if nameF or nameG %}
+          <h3>Combo Meals</h3>
+        {% endif %}
 
-        <h3>Combo Meals</h3>
-        <label for="namef" class="labelq">{{ nameF }}: </label>
-          <input type="number" name="personal" value="0" min="0" class="quantity">
-          <p class="lblprice">x $12.00</p><br>
-        <label for="nameg" class="labelq">{{ nameG }}: </label>
-          <input type="number" name="family" value="0" min="0" class="quantity">
-          <p class="lblprice">x $40.00</p><br>
+        {% if nameF %}
+          <label for="namef" class="labelq">{{ nameF }}: </label>
+            <input type="number" name="personal" value="0" min="0" class="quantity">
+            <p class="lblprice">x $12.00</p><br>
+        {% endif %}
+        {% if nameG %}
+          <label for="nameg" class="labelq">{{ nameG }}: </label>
+            <input type="number" name="family" value="0" min="0" class="quantity">
+            <p class="lblprice">x $40.00</p><br><br>
+        {% endif %}
 
-        <h3>Add-ons</h3>
-        <label for="nameh" class="labelq">{{ nameH }}: </label>
-          <input type="number" name="personal" value="0" min="0" class="quantity">
-          <p class="lblprice">x $12.00</p><br>
-        <label for="namei" class="labelq">{{ nameI }}: </label>
-          <input type="number" name="family" value="0" min="0" class="quantity">
-          <p class="lblprice">x $40.00</p><br>
-        <label for="namej" class="labelq">{{ nameJ }}: </label>
-          <input type="number" name="personal" value="0" min="0" class="quantity">
-          <p class="lblprice">x $12.00</p><br>
-        <label for="namek" class="labelq">{{ nameK }}: </label>
-          <input type="number" name="family" value="0" min="0" class="quantity">
-          <p class="lblprice">x $40.00</p><br>
 
-        <h3>Catering (Please <a href="#foot">Contact us</a> first!)</h3>
+        {% if nameH or nameI or nameJ or nameK %}
+          <h3>Add-ons</h3>
+        {% endif %}
+
+        {% if nameH %}
+          <label for="nameh" class="labelq">{{ nameH }}: </label>
+            <input type="number" name="personal" value="0" min="0" class="quantity">
+            <p class="lblprice">x $12.00</p><br>
+        {% endif %}
+        {% if nameI %}
+          <label for="namei" class="labelq">{{ nameI }}: </label>
+            <input type="number" name="family" value="0" min="0" class="quantity">
+            <p class="lblprice">x $40.00</p><br>
+        {% endif %}
+        {% if nameJ %}
+          <label for="namej" class="labelq">{{ nameJ }}: </label>
+            <input type="number" name="personal" value="0" min="0" class="quantity">
+            <p class="lblprice">x $12.00</p><br>
+        {% endif %}
+        {% if nameK %}
+          <label for="namek" class="labelq">{{ nameK }}: </label>
+            <input type="number" name="family" value="0" min="0" class="quantity">
+            <p class="lblprice">x $40.00</p><br><br>
+        {% endif %}
+
+
+        {% if caterName %}
+          <h3>Custom Catering (Please <a href="#foot">Contact us</a> first!)</h3>
+        {% endif %}
         
+        {% if caterName %}
+          <label for="catername" class="labelq">{{ caterName }}: </label>
+            <input type="number" name="catername" value="0" min="0" class="quantity">
+            <p class="lblprice">x $40.00</p><br><br>
+        {% endif %}
 
         <p style="font-weight:bold;font-size:18px;">Total: $ 0.00 </p>
         <br><br>

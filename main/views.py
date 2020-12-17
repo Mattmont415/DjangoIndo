@@ -56,6 +56,23 @@ def admin5959(request):
     namej = request.POST['namej']
     namek = request.POST['namek']
     catername = request.POST['catername']
+
+    #Passing as a request TO the order.html page
+    return render(request, "main/order.html", { 
+      #On the left is the name of the variable on the order page
+      'nameA': namea, 
+      'nameB': nameb,
+      'nameC': namec,
+      'nameD': named, 
+      'nameE': namee,
+      'nameF': namef,
+      'nameG': nameg, 
+      'nameH': nameh,
+      'nameI': namei,
+      'nameJ': namej, 
+      'nameK': namek,
+      'caterName': catername,
+    })
   return render(request, "main/admin5959.html")
 
 def send_email(request):

@@ -9,18 +9,19 @@
 
   <h2 class="margin">Modifying names and prices of current order options</h2>
 
-  <form action="{% url 'order' %}" method="post">
+  <form method="post" action="{% url 'admin5959' %}">
     {% csrf_token %}
     <div class="formstyle" id="adminform">
       <p><strong>Small Plates</strong></p>
       <label for="namea" class="lblletter"><strong>A. </strong></label>
-        <input type="text" class="inptext" value="{{ nameA }}" name="namea">
+        <input type="text" class="inptext"  name="namea">
         <br>
       <label for="pricea" class="lblprice">Price: </label>
         <input type="number" class="adminprice" min="0" value="{{ priceA }}" name="pricea"><br><br>
 
       <label for="nameb" class="lblletter"><strong>B. </strong></label>
-        <input type="text" class="inptext" value="{{ nameB }}" name="nameb">
+        <input type="text" class="inptext"  name="nameb">
+        <!-- Add back in the "value='{{ blah blah'" -->
         <br>
       <label for="priceb" class="lblprice">Price: </label>
         <input type="number" class="adminprice" min="0" value="{{ priceB }}" name="priceb"><br><br>
