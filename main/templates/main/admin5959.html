@@ -10,6 +10,7 @@
   <h2 class="margin">Modifying names and prices of current order options</h2>
     <p>If you want to display the FULL price, to the decimal place, put "3.00" not just "3"
       next to the respective price text boxes below</p>
+      <!-- the action here is going to send to POST of admin  -->
   <form method="post" action="{% url 'admin5959' %}">
     {% csrf_token %}
     <div class="formstyle" id="adminform">
