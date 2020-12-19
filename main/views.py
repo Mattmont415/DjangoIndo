@@ -58,7 +58,7 @@ def order(request):
     if int(request.POST['nameh']) > 0:
       message += "Sriracha @ $1.00/order: " + str(request.POST['nameh']) + "\n"
       totalCost += int(request.POST['nameh']) * 1
-      message += "  Total cost of item: $" + str(int(request.POST['nameh']) * 12) + ".00\n\n"
+      message += "  Total cost of item: $" + str(int(request.POST['nameh']) * 1) + ".00\n\n"
     if int(request.POST['namei']) > 0:
       message += "Crushed Peanuts @ $2.00/order: " + str(request.POST['namei']) + "\n"
       totalCost += int(request.POST['namei']) * 2
