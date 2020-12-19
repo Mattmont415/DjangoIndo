@@ -84,7 +84,7 @@ def order(request):
       message_name, #Subject
       message, #Message itself
       "tonisfabkitchen@gmail.com", #from email
-      ['mattmont415@gmail.com', 'alexchen9333@gmail.com', 'tonisfabkitchen@gmail.com', message_email], #to email
+      ['mattmont415@gmail.com', 'tonisfabkitchen@gmail.com', message_email], #to email
     )
 
     return render(request, "main/send_email.html")
