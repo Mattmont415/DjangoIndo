@@ -28,34 +28,25 @@
 
 
         <!-- This checks if ANY items exist in the category, THEN display title -->
-
+        {% if nameA or nameB or nameC or nameD or nameE %}
           <h3>Small Plates</h3>
+        {% endif %}
 
-        {% with nameA="Eggroll [3]" %}
-        {% with priceA=5 %}
+        {% if nameA %}
           <label for="namea" class="labelq">{{ nameA }}: </label>
             <input type="number" name="namea" value="0" min="0" class="quantity">
-            <p class="lblprice"> x ${{ priceA }}.00</p><br>
-        {% endwith %}
-        {% endwith %}
-
-          
-        {% with nameB="Shrimp Shumai [6]" %}
-        {% with priceB=7 %}
+            <p class="lblprice"> x ${{ priceA }}</p><br>
+        {% endif %}
+        {% if nameB %}
           <label for="nameb" class="labelq">{{ nameB }}: </label>
             <input type="number" name="nameb" value="0" min="0" class="quantity">
-            <p class="lblprice"> x ${{ priceB }}.00</p><br>
-        {% endwith %}
-        {% endwith %}
-
-        {% with nameC="Summer Roll [2]" %}
-        {% with priceC=4 %}
+            <p class="lblprice"> x ${{ priceB }}</p><br>
+        {% endif %}
+        {% if nameC %}
           <label for="namec" class="labelq">{{ nameC }}: </label>
             <input type="number" name="namec" value="0" min="0" class="quantity">
-            <p class="lblprice"> x ${{ priceC }}.00</p><br>
-        {% endwith %}
-        {% endwith %}
-
+            <p class="lblprice"> x ${{ priceC }}</p><br>
+        {% endif %}
         {% if nameD %}
           <label for="named" class="labelq">{{ nameD }}: </label>
             <input type="number" name="named" value="0" min="0" class="quantity">
@@ -69,46 +60,37 @@
 
         <br><br>
 
-
+        {% if nameF or nameG %}
           <h3>Combo Meals</h3>
+        {% endif %}
 
-        {% with nameF="Personal Meal" %}
-        {% with priceF=12 %}
+        {% if nameF %}
           <label for="namef" class="labelq">{{ nameF }}: </label>
             <input type="number" name="personal" value="0" min="0" class="quantity">
-            <p class="lblprice">x ${{ priceF }}.00</p><br>
-        {% endwith %}
-        {% endwith %}
-
-        {% with nameG="Family Meal" %}
-        {% with priceG=40 %}
+            <p class="lblprice">x ${{ priceF }}</p><br>
+        {% endif %}
+        {% if nameG %}
           <label for="nameg" class="labelq">{{ nameG }}: </label>
             <input type="number" name="family" value="0" min="0" class="quantity">
-            <p class="lblprice">x ${{ priceG }}.00</p><br>
-        {% endwith %}
-        {% endwith %}
+            <p class="lblprice">x ${{ priceG }}</p><br>
+        {% endif %}
 
         <br><br>
 
-
+        {% if nameH or nameI or nameJ or nameK %}
           <h3>Add-ons</h3>
+        {% endif %}
 
-        {% with nameH="Sriracha" %}
-        {% with priceH=1 %}
+        {% if nameH %}
           <label for="nameh" class="labelq">{{ nameH }}: </label>
             <input type="number" name="personal" value="0" min="0" class="quantity">
-            <p class="lblprice">x ${{ priceH }}.00</p><br>
-        {% endwith %}
-        {% endwith %}
-
-        {% with nameI="Crushed Peanut" %}
-        {% with priceI=2 %}
+            <p class="lblprice">x ${{ priceH }}</p><br>
+        {% endif %}
+        {% if nameI %}
           <label for="namei" class="labelq">{{ nameI }}: </label>
             <input type="number" name="family" value="0" min="0" class="quantity">
-            <p class="lblprice">x ${{ priceI }}.00</p><br>
-        {% endwith %}
-        {% endwith %}
-
+            <p class="lblprice">x ${{ priceI }}</p><br>
+        {% endif %}
         {% if nameJ %}
           <label for="namej" class="labelq">{{ nameJ }}: </label>
             <input type="number" name="personal" value="0" min="0" class="quantity">
