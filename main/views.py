@@ -18,17 +18,33 @@ def order(request):
     message_name = "Toni's Kitchen! Regarding order number: " #Need to get the order num some how
     message_email = request.POST['email']
 
-    #Somewhere check if the REQUEST value is > 0, then put in e-mail
+    #Variable to hold the total cost of the order
+    totalCost = 0
 
     message = "Thank you for ordering with us!\n"
     message += "You ordered: \n"
+    if int(request.POST['namea']) > 0:
+      message += "Eggroll (3 cnt): " + str(request.POST['namea']) + "\n"
+      totalCost += int(request.POST['namea']) * 5
+      message += "  Total cost of item: " + str(int(request.POST['namea']) * 5) + ".00\n\n"
+    if int(request.POST['nameb']) > 0:
+      message += "Shrimp Shumail (6 cnt): " + str(request.POST['nameb']) + "\n"
+      totalCost += int(request.POST['nameb']) * 5
+      message += "  Total cost of item: " + str(int(request.POST['nameb']) * 7) + ".00\n\n"
     # if request.POST['namea'].value > 0:
     #   message += nameA + "\n"
     #   message += "Quantity: " + request.POST['namea'].value + "\n"
     #   message += "Total for item: " + (request.POST['namea'] * priceA)
     # personal_meal = request.POST['personal']
     # family_meal = request.POST['family']
-    message += "Your order will come to: \n"
+    message += "Total for order: \n"
+    message += "    " + str(totalCost) + "\n\n"
+    message += "Allergy note/Extra Information: "
+    if request.POST['extrainfo'] == "":
+      message += "NO allergies/Dietary restrictions"
+    else:
+      message += request.POST['extrainfo']
+    message += "\n\nYour order will ship to:"
     message += request.POST['address']
 
     send_mail(

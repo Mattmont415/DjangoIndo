@@ -96,7 +96,7 @@
         {% with nameH="Sriracha" %}
         {% with priceH=1 %}
           <label for="nameh" class="labelq">{{ nameH }}: </label>
-            <input type="number" name="personal" value="0" min="0" class="quantity">
+            <input type="number" name="nameh" value="0" min="0" class="quantity">
             <p class="lblprice">x ${{ priceH }}.00</p><br>
         {% endwith %}
         {% endwith %}
@@ -104,40 +104,30 @@
         {% with nameI="Crushed Peanut" %}
         {% with priceI=2 %}
           <label for="namei" class="labelq">{{ nameI }}: </label>
-            <input type="number" name="family" value="0" min="0" class="quantity">
+            <input type="number" name="namei" value="0" min="0" class="quantity">
             <p class="lblprice">x ${{ priceI }}.00</p><br>
         {% endwith %}
         {% endwith %}
 
         {% if nameJ %}
           <label for="namej" class="labelq">{{ nameJ }}: </label>
-            <input type="number" name="personal" value="0" min="0" class="quantity">
+            <input type="number" name="namej" value="0" min="0" class="quantity">
             <p class="lblprice">x ${{ priceJ }}</p><br>
         {% endif %}
         {% if nameK %}
           <label for="namek" class="labelq">{{ nameK }}: </label>
-            <input type="number" name="family" value="0" min="0" class="quantity">
+            <input type="number" name="namek" value="0" min="0" class="quantity">
             <p class="lblprice">x ${{ priceK }}</p><br>
         {% endif %}
 
         <br><br>
-
-        {% if caterName %}
-          <h3>Custom Catering (Please <a href="#foot">Contact us</a> first!)</h3>
-        {% endif %}
-
-        {% if caterName %}
-          <label for="catername" class="labelq">{{ caterName }}: </label>
-            <input type="number" name="catername" value="0" min="0" class="quantity">
-            <p class="lblprice">x ${{ caterPrice }}</p><br><br>
-        {% endif %}
         
         <!-- Javascript to update the total everytime the 
         value is changed in quantity -->
 
-        <p style="font-weight:bold;font-size:18px;">Total: $ 0.00 </p>
+        <!-- <p style="font-weight:bold;font-size:18px;">Total: $ 0.00 </p> -->
         <br><br>
-        <label for="extrainfo">Please discuss any allergies or dietary restrictions</label>
+        <label for="extrainfo">Please discuss any allergies, dietary restrictions, or extra information</label>
         <br>
         <p style="font-size: 14px;">Unfortunately, we cannot guarantee accommodation of all requests. <a href="#foot">Contacting us</a> first is preferable!</p>
         <textarea name="extrainfo" class="textbox" required></textarea>
