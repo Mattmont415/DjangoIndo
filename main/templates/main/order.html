@@ -39,7 +39,6 @@
         {% endwith %}
         {% endwith %}
 
-          
         {% with nameB="Shrimp Shumai [6]" %}
         {% with priceB=7 %}
           <label for="nameb" class="labelq">{{ nameB }}: </label>
@@ -56,7 +55,7 @@
         {% endwith %}
         {% endwith %}
 
-        {% if nameD %}
+        <!-- {% if nameD %}
           <label for="named" class="labelq">{{ nameD }}: </label>
             <input type="number" name="named" value="0" min="0" class="quantity">
             <p class="lblprice"> x ${{ priceD }}</p><br>
@@ -65,7 +64,7 @@
           <label for="namee" class="labelq">{{ nameE }}: </label>
             <input type="number" name="namee" value="0" min="0" class="quantity">
             <p class="lblprice"> x ${{ priceE }}</p><br>
-        {% endif %}
+        {% endif %} -->
 
         <br><br>
 
@@ -75,7 +74,7 @@
         {% with nameF="Personal Meal" %}
         {% with priceF=12 %}
           <label for="namef" class="labelq">{{ nameF }}: </label>
-            <input type="number" name="personal" value="0" min="0" class="quantity">
+            <input type="number" name="namef" value="0" min="0" class="quantity">
             <p class="lblprice">x ${{ priceF }}.00</p><br>
         {% endwith %}
         {% endwith %}
@@ -83,7 +82,7 @@
         {% with nameG="Family Meal" %}
         {% with priceG=40 %}
           <label for="nameg" class="labelq">{{ nameG }}: </label>
-            <input type="number" name="family" value="0" min="0" class="quantity">
+            <input type="number" name="nameg" value="0" min="0" class="quantity">
             <p class="lblprice">x ${{ priceG }}.00</p><br>
         {% endwith %}
         {% endwith %}

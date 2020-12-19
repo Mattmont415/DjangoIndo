@@ -15,7 +15,7 @@ def menu(request):
 
 def order(request):
   if request.method == "POST":
-    message_name = "Toni's Kitchen! Regarding order number: " #Need to get the order num some how
+    message_name = "Toni's Kitchen! Regarding order number: 00045" #Need to get the order num some how
     message_email = request.POST['email']
 
     #Variable to hold the total cost of the order
@@ -23,22 +23,55 @@ def order(request):
 
     message = "Thank you for ordering with us!\n"
     message += "You ordered: \n"
+
+    #side dish orders
+    if int(request.POST['namea']) > 0 or int(request.POST['nameb']) > 0 or int(request.POST['namec']) > 0:
+      message += "Side Dishes:\n"
     if int(request.POST['namea']) > 0:
-      message += "Eggroll (3 cnt): " + str(request.POST['namea']) + "\n"
+      message += "Eggroll (3 cnt) @ $5.00/order: " + str(request.POST['namea']) + "\n"
       totalCost += int(request.POST['namea']) * 5
-      message += "  Total cost of item: " + str(int(request.POST['namea']) * 5) + ".00\n\n"
+      message += "  Total cost of item: $" + str(int(request.POST['namea']) * 5) + ".00\n\n"
     if int(request.POST['nameb']) > 0:
-      message += "Shrimp Shumail (6 cnt): " + str(request.POST['nameb']) + "\n"
-      totalCost += int(request.POST['nameb']) * 5
-      message += "  Total cost of item: " + str(int(request.POST['nameb']) * 7) + ".00\n\n"
+      message += "Shrimp Shumail (6 cnt) @ $7.00/order: " + str(request.POST['nameb']) + "\n"
+      totalCost += int(request.POST['nameb']) * 7
+      message += "  Total cost of item: $" + str(int(request.POST['nameb']) * 7) + ".00\n\n"
+    if int(request.POST['namec']) > 0:
+      message += "Summer Roll (2 cnt) @ $4.00/order: " + str(request.POST['namec']) + "\n"
+      totalCost += int(request.POST['namec']) * 4
+      message += "  Total cost of item: $" + str(int(request.POST['namec']) * 4) + ".00\n\n"
+
+    #family meal orders
+    if int(request.POST['namef']) > 0 or int(request.POST['nameg']) > 0:
+      message += "Combo Meals: \n"
+    if int(request.POST['namef']) > 0:
+      message += "Personal Meal @ $12.00/order: " + str(request.POST['namef']) + "\n"
+      totalCost += int(request.POST['namef']) * 12
+      message += "  Total cost of item: $" + str(int(request.POST['namef']) * 12) + ".00\n\n"
+    if int(request.POST['nameg']) > 0:
+      message += "Family Meal @ $40.00/order: " + str(request.POST['nameg']) + "\n"
+      totalCost += int(request.POST['nameg']) * 40
+      message += "  Total cost of item: $" + str(int(request.POST['nameg']) * 40) + ".00\n\n"
+    
+    #Add-on orders
+    if int(request.POST['nameh']) > 0 or int(request.POST['namei']) > 0:
+      message += "Add-ons: \n"
+    if int(request.POST['nameh']) > 0:
+      message += "Sriracha @ $1.00/order: " + str(request.POST['nameh']) + "\n"
+      totalCost += int(request.POST['nameh']) * 1
+      message += "  Total cost of item: $" + str(int(request.POST['nameh']) * 12) + ".00\n\n"
+    if int(request.POST['namei']) > 0:
+      message += "Crushed Peanuts @ $2.00/order: " + str(request.POST['namei']) + "\n"
+      totalCost += int(request.POST['namei']) * 2
+      message += "  Total cost of item: $" + str(int(request.POST['namei']) * 2) + ".00\n\n"
+    
     # if request.POST['namea'].value > 0:
     #   message += nameA + "\n"
     #   message += "Quantity: " + request.POST['namea'].value + "\n"
     #   message += "Total for item: " + (request.POST['namea'] * priceA)
     # personal_meal = request.POST['personal']
     # family_meal = request.POST['family']
-    message += "Total for order: \n"
-    message += "    " + str(totalCost) + "\n\n"
+    message += "\n\nTotal for order: \n"
+    message += "    $" + str(totalCost) + ".00\n\n"
     message += "Allergy note/Extra Information: "
     if request.POST['extrainfo'] == "":
       message += "NO allergies/Dietary restrictions"
@@ -96,7 +129,7 @@ def admin5959(request):
     return render(request, "main/order.html", { 
     # return HttpResponseRedirect(reverse("order", kwargs= {
       #On the left is the name of the variable on the order page
-      'nameA': namea, 
+      # 'nameA': namea, 
       # 'nameB': nameb,
       # 'nameC': namec,
       # 'nameD': named, 
