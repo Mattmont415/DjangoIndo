@@ -92,8 +92,14 @@ def order(request):
       message += "NO allergies/Dietary restrictions"
     else:
       message += request.POST['extrainfo']
-    message += "\n\nYour order will ship to:"
+    message += "\n\nYour order will ship to:\n"
     message += request.POST['address']
+
+    #Payment information
+    message += "\n\nPlease forward payment to our Ca$hApp @ ... \n"
+    message += "Or our Venmo @ ..."
+    message += "\n\n\nThank you! We hope you enjoy!\n"
+    message += "Never hesitate to contact us for anything!"
 
     send_mail(
       message_name, #Subject
