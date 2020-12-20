@@ -379,7 +379,8 @@ body {
 
 .lblprice {
   display: inline-block;
-  width: 145px;
+  width: 75px;
+  font-style: italic;
 }
 
 .adminprice {
@@ -420,21 +421,21 @@ body {
 .quantity {
   font-size: 18px;
   height: 30px;
-  width: 43px;
+  width: 37px;
 }
 .textbox {
   width: 300px;
   height: 100px;
 }
-form label {
+/* form label {
   font-size: 18px;
-}
+} */
 form .labelq {
-  display: inline-block;
+  display: block;
   float: left;
   clear: left;
-  width: 120px;
-  font-size: 22px;
+  width: 140px;
+  font-size: 18px;
 }
 label, input {
   margin: 5px;
@@ -451,9 +452,7 @@ label, input {
   border: 3px solid red;
   background-color: orange;
 }
-.lblprice {
-  font-style: italic;
-}
+
 
 
 

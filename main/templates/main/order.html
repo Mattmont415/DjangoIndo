@@ -21,6 +21,7 @@
       an invoice to submit a payment via Venmo or Cashapp. After payment has been received, your order will be confirmed! Please allow several hours for processing as we are a very small business and we are functioning manually! As soon as you receive a confirmation e-mail, usually within a few hours, you will be all set!
       </p>
       <p><strong>Order minimum is $12.00!</strong></p>
+      <p>Quantity of each item per order indicated by what is inside brackets: []</p>
       <p>$3.00 delivery fee for small orders</p>
       <p class="footfonttxt" style="color: rgb(139, 139, 30)"><strong>FREE delivery on all orders over 40$!</strong></p>
 
@@ -41,8 +42,8 @@
         {% with priceA=5 %}
           <label for="namea" class="labelq">{{ nameA }}: </label>
             <input type="number" name="namea" value="0" min="0" class="quantity">
-            <br><br>
-            <p class="lblprice"> x ${{ priceA }}.00</p><br>
+            <!-- <br><br> -->
+            <span class="lblprice"> x ${{ priceA }}.00</span><br>
         {% endwith %}
         {% endwith %}
 
@@ -50,8 +51,8 @@
         {% with priceB=7 %}
           <label for="nameb" class="labelq">{{ nameB }}: </label>
             <input type="number" name="nameb" value="0" min="0" class="quantity">
-            <br><br>
-            <p class="lblprice"> x ${{ priceB }}.00</p><br>
+            <!-- <br><br> -->
+            <span class="lblprice"> x ${{ priceB }}.00</span><br>
         {% endwith %}
         {% endwith %}
 
@@ -59,8 +60,8 @@
         {% with priceC=4 %}
           <label for="namec" class="labelq">{{ nameC }}: </label>
             <input type="number" name="namec" value="0" min="0" class="quantity">
-            <br><br>
-            <p class="lblprice"> x ${{ priceC }}.00</p><br>
+            <!-- <br><br> -->
+            <span class="lblprice"> x ${{ priceC }}.00</span><br>
         {% endwith %}
         {% endwith %}
 
@@ -82,10 +83,12 @@
 
         {% with nameF="Personal Meal" %}
         {% with priceF=12 %}
+        <div>
           <label for="namef" class="labelq">{{ nameF }}: </label>
             <input type="number" name="namef" value="0" min="0" class="quantity">
-            <br><br>
-            <p class="lblprice">x ${{ priceF }}.00</p><br>
+              <!-- <br><br> -->
+            <span class="lblprice">x ${{ priceF }}.00</span><br>
+        </div>
         {% endwith %}
         {% endwith %}
 
@@ -93,7 +96,7 @@
         {% with priceG=40 %}
           <label for="nameg" class="labelq">{{ nameG }}: </label>
             <input type="number" name="nameg" value="0" min="0" class="quantity">
-            <br><br>
+            <!-- <br><br> -->
             <p class="lblprice">x ${{ priceG }}.00</p><br>
         {% endwith %}
         {% endwith %}
@@ -107,7 +110,6 @@
         {% with priceH=1 %}
           <label for="nameh" class="labelq">{{ nameH }}: </label>
             <input type="number" name="nameh" value="0" min="0" class="quantity">
-            <br><br>
             <p class="lblprice">x ${{ priceH }}.00</p><br>
         {% endwith %}
         {% endwith %}
@@ -116,21 +118,20 @@
         {% with priceI=2 %}
           <label for="namei" class="labelq">{{ nameI }}: </label>
             <input type="number" name="namei" value="0" min="0" class="quantity">
-            <br><br>
             <p class="lblprice">x ${{ priceI }}.00</p><br>
         {% endwith %}
         {% endwith %}
 
         {% if nameJ %}
+        <div>
           <label for="namej" class="labelq">{{ nameJ }}: </label>
             <input type="number" name="namej" value="0" min="0" class="quantity">
-            <br><br>
             <p class="lblprice">x ${{ priceJ }}</p><br>
+        </div>
         {% endif %}
         {% if nameK %}
           <label for="namek" class="labelq">{{ nameK }}: </label>
             <input type="number" name="namek" value="0" min="0" class="quantity">
-            <br><br>
             <p class="lblprice">x ${{ priceK }}</p><br>
         {% endif %}
 
