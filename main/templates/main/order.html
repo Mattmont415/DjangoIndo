@@ -20,11 +20,16 @@
         Please select the item quantity of each and then enter your e-mail. You will be sent
       an invoice to submit a payment via Venmo or Cashapp. After payment has been received, your order will be confirmed! Please allow several hours for processing as we are a very small business and we are functioning manually! As soon as you receive a confirmation e-mail, usually within a few hours, you will be all set!
       </p>
+      <p><strong>Order minimum is $12.00! ($3.00 delivery fee)</strong></p>
       <p class="footfonttxt" style="color: rgb(139, 139, 30)"><strong>FREE delivery on all orders over 40$!</strong></p>
 
       <h2>Order Form: </h2>
       <form method="post">
         {% csrf_token %}
+
+        {% if alert_flag %}
+          <script>alert("Order minimum not met! Please Order at least $12.00")</script>
+        {% endif %}
 
 
         <!-- This checks if ANY items exist in the category, THEN display title -->

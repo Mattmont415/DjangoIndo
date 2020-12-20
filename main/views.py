@@ -70,9 +70,22 @@ def order(request):
     #   message += "Total for item: " + (request.POST['namea'] * priceA)
     # personal_meal = request.POST['personal']
     # family_meal = request.POST['family']
+
+    #If the order does not meet the minimum requirements, bounce back to order
+    #Send error message
+    if totalCost < 12:
+      return render(request, "main/order.html", {'alert_flag': True})
+
+    #Add a delivery fee
+    if totalCost < 40:
+      message += "Order under $40.00 adds a $3.00 delivery fee"
+      totalCost += 3
+
     message += "\n\nTotal for order: \n"
     message += "    $" + str(totalCost) + ".00\n\n"
-    message += "Allergy note/Extra Information: "
+
+
+    message += "Allergy Note/Extra Information: "
     if request.POST['extrainfo'] == "":
       message += "NO allergies/Dietary restrictions"
     else:
