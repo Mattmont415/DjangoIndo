@@ -80,6 +80,8 @@ def order(request):
     if totalCost < 40:
       message += "Order under $40.00 adds a $3.00 delivery fee"
       totalCost += 3
+    else:
+      message += "Order cost sufficient for FREE delivery!"
 
     message += "\n\nTotal for order: \n"
     message += "    $" + str(totalCost) + ".00\n\n"
